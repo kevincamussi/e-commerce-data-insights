@@ -12,7 +12,7 @@ def create_table():
         id INTEGER PRIMARY KEY,
         title TEXT,
         category TEXT,
-        price REAL 
+        price REAL,
         rating_rate REAL,
         rating_count INTEGER,
         profit REAL,
@@ -21,4 +21,4 @@ def create_table():
     """)
     conn.commit()
     conn.close()
-    print("Table created (or already exists).")
+    print("✅ Table created (or already exists).")
