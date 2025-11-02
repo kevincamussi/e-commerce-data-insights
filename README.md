@@ -55,7 +55,7 @@ ecommerce-insights/
 
 ## 1️⃣ Clone the repository
 
-git clone https://github.com/kevincamussi/ecommerce-data-insights.git
+git clone https://github.com/kevincamussi/e-commerce-data-insights.git  
 cd ecommerce-data-insights
 
 ## 2️⃣ (Optional) Create a virtual environment
