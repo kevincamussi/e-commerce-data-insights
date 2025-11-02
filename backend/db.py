@@ -1,12 +1,13 @@
 import sqlite3
+from sqlite3 import Connection, Cursor
 
-def get_connection():
+def get_connection() -> Connection:
     conn = sqlite3.connect("ecommerce.db")
     return conn
 
-def create_table():
-    conn = get_connection()
-    cursor = conn.cursor()
+def create_table() -> None:
+    conn: Connection = get_connection()
+    cursor: Cursor = conn.cursor()
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS products (
         id INTEGER PRIMARY KEY,
