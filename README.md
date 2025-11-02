@@ -32,61 +32,57 @@ This project demonstrates a full **data pipeline** — from API integration and 
 
 ## 📂 Project Structure
 
-ecommerce-insights/
-├── backend/
-│ ├── db.py # Database connection and table creation
-│ ├── fetch_data.py # Fetches and saves API data into SQLite
-│
-├── data_processing/
-│ └── process_data.py # Cleans and exports data using pandas
-│
-├── dashboard/
-│ └── app.py # Streamlit dashboard (interactive visuals)
-│
-├── exports/
-│ └── clean_data.csv # Processed data exported for Power BI
-│
-├── requirements.txt
-└── README.md
-
-yaml
-Copy code
-
+ecommerce-insights/  
+├── backend/  
+│ ├── db.py # Database connection and table creation  
+│ ├── fetch_data.py # Fetches and saves API data into SQLite  
+│  
+├── data_processing/  
+│ └── process_data.py # Cleans and exports data using pandas  
+│  
+├── dashboard/  
+│ └── app.py # Streamlit dashboard (interactive visuals)  
+│  
+├── exports/  
+│ └── clean_data.csv # Processed data exported for Power BI  
+│  
+├── requirements.txt  
+└── README.md  
+  
 ---
 
 ## ⚙️ Installation
 
-### 1️⃣ Clone the repository
+## 1️⃣ Clone the repository
 
-```bash
-git clone https://github.com/<your-username>/ecommerce-data-insights.git
+git clone https://github.com/kevincamussi/ecommerce-data-insights.git
 cd ecommerce-data-insights
-2️⃣ (Optional) Create a virtual environment
-bash
-Copy code
+
+## 2️⃣ (Optional) Create a virtual environment
+
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\activate (Windows)
-3️⃣ Install dependencies
-bash
-Copy code
+
+## 3️⃣ Install dependencies
+
 pip install -r requirements.txt
-🧩 Usage
-1️⃣ Create the database and populate it
-bash
-Copy code
+
+## 🧩 Usage  
+## 1️⃣ Create the database and populate it
+
 python backend/db.py
 python backend/fetch_data.py
-2️⃣ Process and clean the data
-bash
-Copy code
+
+## 2️⃣ Process and clean the data
+
 python data_processing/process_data.py
-3️⃣ Launch the dashboard
-bash
-Copy code
+
+## 3️⃣ Launch the dashboard
+
 streamlit run dashboard/app.py
 Then open the link provided (usually http://localhost:8501) to view the interactive dashboard.
 
-📊 Dashboard Overview
+## 📊 Dashboard Overview  
 Streamlit Dashboard Features:
 
 Filter by category
@@ -97,9 +93,9 @@ Bar chart: Price × Profit per Product
 
 Scatter chart: Price × Rating per Category
 
-Example visuals:
+**Example visuals:**
 
-📈 Power BI Integration (Optional)
+## 📈 Power BI Integration (Optional)
 You can import the exported file exports/clean_data.csv into Power BI for advanced BI dashboards and executive reports.
 
 Steps:
@@ -111,4 +107,4 @@ Go to Get Data → CSV
 Select exports/clean_data.csv
 
 Build visuals and insights
-```
+
