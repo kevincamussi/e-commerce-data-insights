@@ -18,15 +18,15 @@ st.set_page_config(page_title="E-Commerce Insights", page_icon="🛍️", layout
 st.title("🛒 E-Commerce Data Insights Dashboard")
 
 df: DataFrame = load_csv()
-categories: List[str] = st.multiselect("Selecione categorias:", df["category"].unique().tolist(), default=df["category"].unique().tolist())
+categories: List[str] = st.multiselect("Select categories:", df["category"].unique().tolist(), default=df["category"].unique().tolist())
 filtered: DataFrame = df[df["category"].isin(categories)]
 
 col1, col2, col3 = st.columns(3)
-col1.metric("Produtos", len(filtered))
-col2.metric("Preço Médio", f"${filtered['price'].mean():.2f}")
-col3.metric("Lucro Total", f"${filtered['adjusted_profit'].sum():,.2f}")
+col1.metric("Products", len(filtered))
+col2.metric("Average Price", f"${filtered['price'].mean():.2f}")
+col3.metric("Total Profit", f"${filtered['adjusted_profit'].sum():,.2f}")
 
-tab1, tab2 = st.tabs(["📈 Preço e Lucro", "⭐ Avaliações"])
+tab1, tab2 = st.tabs(["📈 Price and Profit", "⭐ Reviews"])
 with tab1:
     st.plotly_chart(create_price_profit_chart(filtered), width='stretch')
 with tab2:
